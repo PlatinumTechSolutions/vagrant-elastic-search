@@ -1,0 +1,10 @@
+network:
+  host: _eth1_
+
+path:
+  logs: /var/log/elasticsearch
+  data: /var/data/elasticsearch
+
+cluster:
+  name: my-elastic-cluster
+

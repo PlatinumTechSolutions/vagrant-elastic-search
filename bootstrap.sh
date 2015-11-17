@@ -12,5 +12,16 @@ sudo apt-get -y install elasticsearch
 
 sudo update-rc.d elasticsearch defaults 95 10
 
+# install my configuration
+sudo cp /vagrant/config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+
+# create log & data directories if not present
+mkdir -p /var/log/elasticsearch /var/data/elasticsearch
+
+# fix the directory permissions so elasticsearch can use them
+chown elasticsearch:elasticsearch /var/log/elasticsearch /var/data/elasticsearch
+
+# restart elastic service
 sudo service elasticsearch restart
 
+echo "DONE"
