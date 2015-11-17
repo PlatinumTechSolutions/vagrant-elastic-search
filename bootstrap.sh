@@ -7,7 +7,7 @@ echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sud
 
 # Run apt-get update and the repository is ready for use.
 sudo apt-get update
-sudo apt-get -y install java
+sudo apt-get -y install default-jre
 sudo apt-get -y install elasticsearch
 
 sudo update-rc.d elasticsearch defaults 95 10
